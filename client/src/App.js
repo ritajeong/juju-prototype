@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/login" component = {LoginPage}/>
           <Route exact path="/register" component = {RegisterPage}/>
         </Switch>
-      </div>
+      </div>  
     </Router>
   );
 }
