@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
         trim : true,
         unique :1
     },
-    passward : {
+    password : {
         type: String,
         maxlength : 50
     },
@@ -45,6 +45,11 @@ userSchema.pre('save', function(next){
         next()
     }
 })
+
+userSchema.methods.comparePassword= function(plainPassword, cb){
+    //plainPassword 1234 암호화된 비밀번호 1@df$w@5432o^%w
+    bcrypt.compare(plainPassword, this.password)
+}
 
 const User = mongoose.model('User',userSchema)
 
