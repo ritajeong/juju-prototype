@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+<<<<<<< HEAD
+=======
+const { JsonWebTokenError } = require('jsonwebtoken');
+>>>>>>> 2909fd9591a81a608379c9b05311e8b8a0ac0c6a
 const saltRounds = 10
 const jwt = require('jsonwebtoken');
 
@@ -17,7 +21,11 @@ const userSchema = mongoose.Schema({
         type: String,
         minlength : 5
     },
+<<<<<<< HEAD
     lastname :{
+=======
+    lastnamd : {
+>>>>>>> 2909fd9591a81a608379c9b05311e8b8a0ac0c6a
         type : String,
         maxlength : 50
     },

@@ -4,7 +4,7 @@ const port = 5000
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
-
+const { auth } = require('./middleware/auth');
 const { User } = require("./models/User");
 const { auth } = require("./middleware/auth");
 
@@ -79,12 +79,21 @@ app.get('/api/users/auth', auth , (req,res)=>{
   })
 })
 
+<<<<<<< HEAD
 app.get('/api/users/logout', auth, (req, res)=>{
   console.log("index.js 에서 logout 진입")
   User.findOneAndUpdate({_id:req.user._id},
     {token: ""}
     , (err, user)=>{
       if(err) return res.json({success:false, err});
+=======
+
+app.get('api/users/logout', auth, (req, res)=>{
+  User.findOneAndUpdate({_id : req.user._id},
+    {token : ""}
+    , (err, user)=>{
+      if(err) return res.json({success : false, err});
+>>>>>>> 2909fd9591a81a608379c9b05311e8b8a0ac0c6a
       return res.status(200).send({
         success:true
       })
