@@ -38,9 +38,9 @@ function LoginPage(props) {
 
     return (
         <div style={{
-            diplay:'flex', justifyContent : 'center', alignItems: 'center'
+            display: 'flex', justifyContent: 'center', alignItems: 'center'
             , width: '100%', height: '100vh'
-            }}>
+        }}>
 
             <form style={{display:'flex', flexDirection:'column'}}
                 onSubmit={onSubmitHandler}
