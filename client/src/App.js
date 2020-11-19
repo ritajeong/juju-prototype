@@ -5,6 +5,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from './components/views/Home'
+import Community from './components/views/Community'
+import List from './components/views/List'
+import MyPage from './components/views/Mypage'
+import Header from './components/Header/Header'
+import NavBar from './components/views/NavBar/NavBar'
 
 import LandingPage from './components/views/LandingPage/LandingPage'
 import LoginPage from './components/views/LoginPage/LoginPage'
@@ -14,24 +20,23 @@ import Auth from './hoc/auth'
 function App() {
   return (
     <Router>
-      <div>
-         
-
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+      <section>
+        <div>
+      <NavBar></NavBar>
+      <Header></Header>
+      </div>
+      <div className="app">
         <Switch>
+          <Route exact path="/home" component={Home}/>
+          <Route path="/community" component={Community}/>
+          <Route path="/list" component={List}/>
+          <Route path="/mypage" component={MyPage}/>
           <Route exact path="/" component = { Auth(LandingPage,null,true)}/>
           <Route exact path="/login" component = {Auth(LoginPage,false)}/>
           <Route exact path="/register" component = {Auth(RegisterPage,false)}/>
         </Switch>
-      </div>  
+         </div>  
+        </section>
     </Router>
   );
 }
