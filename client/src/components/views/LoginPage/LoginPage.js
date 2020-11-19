@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/user_action'
+import { withRouter } from 'react-router-dom';
 
 function LoginPage(props) {
     const dispatch = useDispatch()
@@ -27,10 +28,10 @@ function LoginPage(props) {
         
         dispatch(loginUser(body))
             .then(response =>{
-                if(response.payload.logiSuccess){
+                if(response.payload.loginSuccess){
                     props.history.push('/')
                 }else{
-                    alert('Error')
+                    alert('로그인에 실패함')
                 }
             })
     }
@@ -42,15 +43,15 @@ function LoginPage(props) {
             }}>
 
             <form style={{display:'flex', flexDirection:'column'}}
-                onSUbmit={onSubmitHandler}
+                onSubmit={onSubmitHandler}
             >
 
                 <label>Email</label>
-                <input type = "email" value={Email} value onChange={onEmailHandler}/>
+                <input type = "email" value={Email} onChange={onEmailHandler}/>
                 <label>password</label>
-                <input type = "password" value={Password} value onChange={onPasswordHandler}/>
+                <input type = "password" value={Password} onChange={onPasswordHandler}/>
                 <br/>
-                <button >
+                <button type = "submit">
                     Login
                 </button>
             </form>
@@ -58,4 +59,4 @@ function LoginPage(props) {
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage)
