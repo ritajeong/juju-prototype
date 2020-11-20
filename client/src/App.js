@@ -10,10 +10,11 @@ import Community from './components/views/Community'
 import List from './components/views/List'
 import MyPage from './components/views/Mypage'
 import Header from './components/Header/Header'
-import NavBar from './components/views/NavBar/NavBar'
+import NavBar from './components/Header/NavBar'
  
-import LoginPage from './components/views/LoginPage/LoginPage'
-import RegisterPage from './components/views/RegisterPage/RegisterPage'
+import LoginPage from './components/views/LoginPage'
+import RegisterPage from './components/views/RegisterPage'
+import Footer from './components/views/Footer'
 import Auth from './hoc/auth'
 
 function App() {
