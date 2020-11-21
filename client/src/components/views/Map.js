@@ -1,7 +1,10 @@
 import React from 'react';
-import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps'; // 패키지 불러오기
+import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps'; // 패키지 불러오기
 
 function NaverMapAPI() {
+  const navermaps = window.naver.maps;
+
+
   return (
     <div style={{
       display: 'flex', justifyContent: 'center', alignItems: 'center'
@@ -14,7 +17,15 @@ function NaverMapAPI() {
       }}
       defaultCenter={{ lat: 37.4506738, lng: 126.6538088 }} // 지도 초기 위치
       defaultZoom={13} // 지도 초기 확대 배율
-    />
+    >
+      <Marker 
+        position={new navermaps.LatLng(37.4506738, 126.6538088)}
+        animation={navermaps.Animation.BOUNCE}
+        onClick={() => {
+          alert('여기는 인하대 입니다.')
+        }}
+      />
+     </NaverMap>
     </div>
   );
 }
