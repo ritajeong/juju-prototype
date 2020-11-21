@@ -1,9 +1,10 @@
-import React from 'react';
-import styles from './Mypage.scss';
+import React from 'react'; 
 
 const Mypage = () => {
     return (
-      <div className="mypage">
+      <div style={{
+        display: 'flex', justifyContent: 'center', alignItems: 'center'
+        , width: '100%', height: '100vh'}}>
         <h2>mypage</h2>
         </div>
     );
