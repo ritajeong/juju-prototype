@@ -4,6 +4,11 @@ import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps';
 function NaverMapAPI() {
   const navermaps = window.naver.maps;
 
+  const latlngs =[
+    [37.4506738, 126.6538088],[37.4506738, 126.653338],[37.4506738, 126.62228],[37.4506738, 126.666688]]
+  const latlngsList = latlngs.map(
+    (latlngs)=>({latlngs})
+  );
 
   return (
     <div style={{
@@ -18,11 +23,23 @@ function NaverMapAPI() {
       defaultCenter={{ lat: 37.4506738, lng: 126.6538088 }} // 지도 초기 위치
       defaultZoom={13} // 지도 초기 확대 배율
     >
+      
       <Marker 
         position={new navermaps.LatLng(37.4506738, 126.6538088)}
-        animation={navermaps.Animation.BOUNCE}
         onClick={() => {
-          alert('여기는 인하대 입니다.')
+          alert('a')
+        }}
+      />
+      <Marker 
+        position={new navermaps.LatLng(37.4506738, 126.69558)}
+        onClick={() => {
+          alert('b')
+        }}
+      />
+      <Marker 
+        position={new navermaps.LatLng({latlngsList})}
+        onClick={() => {
+          alert('매핑?')
         }}
       />
      </NaverMap>
