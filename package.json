@@ -8,7 +8,9 @@
     "backend": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "yarn --cwd ./client run start",
-    "dev": "concurrently -k \"npm run backend\" \"npm run client \""
+    "dev": "concurrently -k \"npm run backend\" \"npm run client \"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+
   },
   "author": "",
   "license": "ISC",

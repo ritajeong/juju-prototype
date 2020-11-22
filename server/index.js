@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const path = require('path');
+const port = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
@@ -20,12 +21,6 @@ mongoose.connect(config.mongoURI,{
 }).then(()=>console.log('MongoDB connected...'))
 .catch(err=> console.log(err))
 
-
-app.get('/', (req, res) => {
-  res.send('Hello World! ')
-})
-
-app.get('/api/hello', (req, res)=>  res.send("안녕하세요"))
 
 app.post('/api/users/register', (req, res) =>{
     //회원 가입시 필요한 정보를 클라이언트에서 가져오면 db에 넣음
@@ -92,6 +87,22 @@ app.get('/api/users/logout', auth, (req, res)=>{
     })
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+// 미들웨어 함수를 특정 경로에 등록
+app.use('/api/data', function(req, res) {
+  res.json({ greeting: 'Hello World' });
+});
+
+// 기본 포트를 app 객체에 설정
+const port = process.env.PORT || 5000;
+app.listen(port);
+
+// 리액트 정적 파일 제공
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// 라우트 설정
+app.get('*', (req, res) => {
+res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+console.log(`server running at http ${port}`);
+ 
