@@ -10,7 +10,6 @@
     "client": "yarn --cwd ./client run start",
     "dev": "concurrently -k \"npm run backend\" \"npm run client \"",
     "heroku-postbuild": "cd client && npm install && npm run build"
-
   },
   "author": "",
   "license": "ISC",
