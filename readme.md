@@ -35,7 +35,7 @@
 
 📌 **서비스 소개(비즈니스 모델)**
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/juju_prototype__.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/juju_prototype__.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/juju_prototype__.png](img/juju_prototype__.png)
 
 크게 커뮤니티와 헬스장 통합 리뷰 조회로 구성된다. (실제 개발에서 커뮤니티 기능은 생략되었다. )커뮤니티 수익모델에 있어 초기유저는 필수적이다. 주주팀은 이를 위해 헬스장 통합 리뷰를 제공한다.
 
