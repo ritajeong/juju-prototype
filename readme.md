@@ -19,7 +19,7 @@
 
 📌**개발 스케줄(7일)**
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled.png](img/Untitled.png)
 
 📌**서비스 필요성 제기**
 
@@ -69,7 +69,7 @@
 
      userSchema.pre함수에서 bcrypt를 사용함
 
-   ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%201.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%201.png)
+   ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%201.png](img/Untitled%201.png)
 
    *Figure 1계정 생성 및 비밀번호 암호화*
 
@@ -79,7 +79,7 @@
 
      비밀번호가 같다면 토큰을 생성함. jsonwebtoken을 사용.
 
-     ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%202.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%202.png)
+     ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%202.png](img/Untitled%202.png)
 
      *Figure 2로그인되어 토큰이 생성됨*
 
@@ -87,7 +87,7 @@
 
    logout route를 생성하고 로그아웃하려는 계정을 데이터베이스에 찾아서 토큰을 지움.
 
-   ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%203.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%203.png)
+   ![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%203.png](img/Untitled%203.png)
 
    *Figure 3로그아웃하여 토큰이 제거됨*
 
@@ -97,47 +97,47 @@
 
 - 카카오맵 리뷰 추출: 파이썬 BeautifulSoup, 셀레니움 라이브러리 이용
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%204.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%204.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%204.png](img/Untitled%204.png)
 
 - 결과를 json파일로 저장
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%205.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%205.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%205.png](img/Untitled%205.png)
 
 *추출된 리뷰는 데이터베이스에 저장되었습니다*
 
 - 추출된 리뷰 예시
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%206.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%206.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%206.png](img/Untitled%206.png)
 
 **3. 네이버 지도 api 사용[[iii]]()**
 
 - 네이버 클라우드 플랫폼에서 네이버 지도 상품을 신청하고 클라이언트 키를 받음
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%207.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%207.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%207.png](img/Untitled%207.png)
 
 - npm react-naver-maps 설치
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%208.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%208.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%208.png](img/Untitled%208.png)
 
 - 지도 컴포넌트 생성 및 소스 수정
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%209.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%209.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%209.png](img/Untitled%209.png)
 
 - 위도, 경도 및 마커 설정
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2010.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2010.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2010.png](img/Untitled%2010.png)
 
 - 마커를 누르면 크롤링한 리뷰가 뜸
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2011.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2011.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2011.png](img/Untitled%2011.png)
 
 **4. 화면 구성**
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2012.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2012.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2012.png](img/Untitled%2012.png)
 
 **5. 소스디렉터리**
 
-![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2013.png](juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2013.png)
+![juju%20prototype%20635101d53ed24dbcbfd45f61259c9d5a/Untitled%2013.png](img/Untitled%2013.png)
 
 개발 결과는 함께 첨부한 동영상에서 확인해주시길 바랍니다.
 
